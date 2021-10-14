@@ -42,13 +42,19 @@
 //     console.log(km);
 // }
 
-let i = 9;
-if (i % 2 == 0) {
-    console.log("even number")
+// let i = 9;
+// if (i % 2 == 0) {
+//     console.log("even number")
 
-} else {
-    console.log("odd number")
+// } else {
+//     console.log("odd number")
+
+// }
+
+
+i = 10;
+while (i >= 5) {
+    console.log("malli");
+    i--
 
 }
-
-
