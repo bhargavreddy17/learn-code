@@ -48,7 +48,17 @@ const userLogin = async (req, res) => {
     }
 };
 
+const getUsers = async (req, res) => {
+    try{
+        const users = await usersModel.find();
+        return res.status(200).send(users)
+    }catch(err) {
+        return res.status(500).send('Internal Server Error')
+    }
+}
+
 module.exports={
     userSignUp,
-    userLogin
-}
+    userLogin,
+    getUsers
+} 
