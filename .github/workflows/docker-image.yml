@@ -15,6 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build -t bhargavreddy17/node:test .
+      run: docker build -t bhargavreddy17/rgt-omni:testnodejs .
     - name: Push image to Docker Hub
-      run: docker push bhargavreddy17/node:test
+      run: docker push bhargavreddy17/rgt-omni:testnodejs
