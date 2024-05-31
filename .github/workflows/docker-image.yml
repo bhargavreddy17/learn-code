@@ -14,6 +14,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - name: Log in to Docker Hub
+      uses: docker/login-action@v2
+      with:
+        username: bhargavreddy17
+        password: Bhargav@17
     - name: Build the Docker image
       run: docker build -t bhargavreddy17/rgt-omni:testnodejs .
     - name: Push image to Docker Hub
