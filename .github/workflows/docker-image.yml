@@ -27,6 +27,6 @@ jobs:
     - name: Trigger deployment repo workflow
       uses: peter-evans/repository-dispatch@v2
       with:
-        token: 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
+        token: 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
         repository: bhargavreddy17/mycoookbooks
         event-type: trigger-deployment
