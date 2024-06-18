@@ -1,4 +1,4 @@
-# this is taken from docker pull node insted of locally we are mentioned
+# this is taken from docker pull node insted of locally we are mentioned.
 FROM node:alpine
 
 # where your code store in docker container/image
