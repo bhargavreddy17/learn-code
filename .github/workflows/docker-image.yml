@@ -30,4 +30,3 @@ jobs:
         token: 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
         repository: bhargavreddy17/mycoookbooks
         event-type: trigger-deployment
-        client-payload: '{"image_tag": "testnodejs"}'
