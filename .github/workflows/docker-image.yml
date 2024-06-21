@@ -27,6 +27,6 @@ jobs:
     - name: Trigger deployment repo workflow
       uses: peter-evans/repository-dispatch@v2
       with:
-        token: ${{secrets.PERSONAL_GITHUB_TOKEN}}
+        GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
         repository: bhargavreddy17/mycoookbooks
         event-type: trigger-deployment
