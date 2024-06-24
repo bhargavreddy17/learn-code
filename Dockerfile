@@ -4,6 +4,7 @@ FROM node:alpine
 # where your code store in docker container/image
 WORKDIR /usr/src/app
 
+
 # copying package.json and package-lock.json for installing node modules
 COPY package*.json .
 
