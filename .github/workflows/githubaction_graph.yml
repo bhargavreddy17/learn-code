@@ -1,3 +1,10 @@
+name: Generate Workflow Graph
+
+on:
+  push:
+    branches:
+      - main
+
 jobs:
   visualize:
     runs-on: ubuntu-latest
@@ -10,9 +17,7 @@ jobs:
 
       # Generate Workflow Graph
       - name: Generate Graph
-        run: |
-          ls -la .github/workflows  # List files in workflows directory
-          dot -Tpng .github/workflows/*.yaml -o workflow_graph.png
+        run: dot -Tpng .github/workflows/*.yaml -o workflow_graph.png
         working-directory: ${{ github.workspace }}
 
       # Upload artifact
