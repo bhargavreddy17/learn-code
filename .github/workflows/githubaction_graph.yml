@@ -17,7 +17,7 @@ jobs:
 
       # Generate Workflow Graph
       - name: Generate Graph
-        run: dot -Tpng .github/workflows/*.yaml -o workflow_graph.png
+        run: dot -Tpng .github/workflows/*.yml -o workflow_graph.png
         working-directory: ${{ github.workspace }}
 
       # Upload artifact
