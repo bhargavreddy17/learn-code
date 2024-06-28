@@ -10,11 +10,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: tpalsulich/github-action-graph@v1
-        with:
-          output-file: workflow_graph.dot
-      - name: Convert to PNG
-        run: dot -Tpng workflow_graph.dot -o workflow_graph.png
+
+      # Install Graphviz
+      - name: Install Graphviz
+        run: sudo apt-get install graphviz -y
+
+      # Generate Workflow Graph
+      - name: Generate Graph
+        run: dot -Tpng .github/workflows/*.yaml -o workflow_graph.png
+
+      # Upload artifact
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
