@@ -6,7 +6,7 @@ WORKDIR /usr/src/app
 
 # copying package.json and package-lock.json for installing node modules
 COPY package*.json .
-
+ 
 # run command npm install for node modules --> we can use RUN npm install also --> ci means continue integration
 RUN npm ci
 
